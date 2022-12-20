@@ -1,0 +1,51 @@
+<!--<div class="container">-->
+<!--<div id="wrap">-->
+<!--    <h1>Login to Global Pay</h1>-->
+<!--    <div id="app">-->
+<!--        <div>-->
+<!--            <div class="alert-warning alert alert-danger" *ngIf="invalidLogin">{{errorMessage}}</div>-->
+<!--            <h2>User Name</h2>-->
+<!--            <input type="text" name="username" [(ngModel)]='credentials.username'/>-->
+<!--        </div>-->
+<!--        <div>-->
+<!--            <h2>Password</h2>-->
+<!--            <input type="password" name="password" [(ngModel)]='credentials.password'/>-->
+<!--        </div>-->
+<!--        <button (click)=onSubmit()>Log in</button>-->
+<!--    </div>-->
+<!--    <br />-->
+<!--    {{credentials | json}}-->
+<!--</div>-->
+<!--</div>-->
+<div class="bootstrap-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="container text-center">
+                <img class="img-fluid" style="width: 50px" src="favicon.ico" alt=""/>
+            </div>
+            <div class="col-md-6 offset-md-3">
+                <h1 class="text-center">Login here !</h1>
+                <div class="alert-warning alert alert-danger" *ngIf="invalidLogin">{{errorMessage}}</div>
+                <form>
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Username</mat-label>
+                        <input type="text" name="username" [(ngModel)]='credentials.username' matInput/>
+                    </mat-form-field>
+
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Password</mat-label>
+                        <input type="password" name="password" [(ngModel)]='credentials.password' matInput/>
+                    </mat-form-field>
+
+                    <div class="container text-center">
+                        <button (click)=onSubmit() type="submit" mat-raised-button color="primary">Login</button>
+                        <button type="reset" style="margin-left: 10px" mat-raised-button color="accent">Reset</button>
+                    </div>
+                </form>
+            </div>
+            <br/>
+            {{credentials | json}}
+        </div>
+    </div>
+
+</div>
